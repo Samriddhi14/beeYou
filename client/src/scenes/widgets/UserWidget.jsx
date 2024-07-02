@@ -20,7 +20,7 @@ import {
     const dark = palette.neutral.dark;
     const medium = palette.neutral.medium;
     const main = palette.neutral.main;
-    const userImage = picturePath ? <UserImage image={picturePath} /> : null;
+    //const userImage = picturePath ? <UserImage image={picturePath} /> : null;
 
   
     const getUser = async () => {
