@@ -24,7 +24,7 @@ const __dirname = path.dirname(__filename);
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 6001;
+const PORT = process.env.PORT || 4000;
 
 /* MIDDLEWARE */
 app.use(express.json());
