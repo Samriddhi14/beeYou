@@ -7,7 +7,7 @@
     "server": "nodemon server/index.js",
     "start": "npm run build && npm run start:server",
     "build": "export NODE_OPTIONS=--max_old_space_size=4096 && cd client && npm install && npm run build && npm rebuild bcrypt --build-from-source",
-    "start:server": "cd server && npm install && npm rebuild bcrypt --build-from-source && node index.js"
+    "start:server": "cd server && npm install && npm rebuild bcrypt --build-from-source && nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
