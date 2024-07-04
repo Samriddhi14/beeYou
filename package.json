@@ -1,13 +1,30 @@
 {
   "name": "beeYou",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm run start:server",
-    "build": "cd client && npm install && npm run build",
-    "start:server": "cd server && npm install && node index.js"
+    "server": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "socket.io": "^4.7.5",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
