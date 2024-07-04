@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon server/index.js",
-    "start": "node server/index.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client"
+    "start": "npm run build && npm run start:server",
+    "build": "cd client && npm install && npm run build && npm rebuild bcrypt --build-from-source",
+    "start:server": "cd server && npm install && npm rebuild bcrypt --build-from-source && node index.js"
   },
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "bcryptjs": "^2.4.3",
